@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+##ignore this file##
+.idea

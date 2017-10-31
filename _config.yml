@@ -4,11 +4,11 @@ layouts:     ./_layouts
 timezone:    Asia/Hongkong
 
 # Site settings
-email: 1540294142@qq.com
-author: Joytou Wu
-owner_name: Joytou Wu
-github_username: joytou
-repo: JOYTOU
+email: chenshuichuan@hotmail.com
+author: Ricardo
+owner_name: Ricardo
+github_username: chenshuichuan
+repo: chenshuichuan
 
 #Server
 url: http://joytou.nets.hk
@@ -36,12 +36,13 @@ keywords:
         - "github"
         - "bootstrap"
         - "blog"
-        - "joytou"
+        - "Ricardo"
         - "markdown"
         - "jekyll"
         - "博客"
         - "个人博客"
-        - "博客模板"
+        - "Ricardo的博客"
+        - "chenshuichuan的博客"
         
 #Update configuration
 versioncode: 1

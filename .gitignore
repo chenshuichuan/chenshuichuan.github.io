@@ -27,5 +27,7 @@
 *.out
 *.app
 
-##ignore this file##
+##I ignore this file##
 .idea
+.sass-cache
+_site

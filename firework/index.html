@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML5 Canvas烟花动画 随机色彩、高度和角度DEMO演示</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>For Margaret</title>
 
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="css/demo.css">
-
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <style>
+        @font-face {
+            font-family: 'BaskervilleBook';
+            src: url('./css/BaskervilleBook-RegularItalic.ttf');
+        }
+        #title {
+            font-family: BaskervilleBook;
+            font-size: 25px;
+            position: absolute;
+            color: rgba(225, 12, 170, 1);
+            left: 30px;
+            top:30px;
+            /*top: 284px;*/
+            z-index: 100;
+        }
+    </style>
 </head>
 <body>
+<div id="title">
+    <p>For Margaret: Give you the fireworks that never ends.</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---From R</p>
+</div>
 
 <div class="demo"></div>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.fireworks.js"></script>
 <script type="text/javascript">
-	$('.demo').fireworks({ 
-	  sound: true, // sound effect
-	  opacity: 0.9, 
-	  width: '100%', 
-	  height: '100%' 
-	});
+    $('.demo').fireworks({
+        sound: true, // sound effect
+        opacity: 0.9,
+        width: '100%',
+        height: '100%'
+    });
+    window.onload=function(){
+        changeDivHeight();
+    };
+    //当浏览器窗口大小改变时，设置显示内容的高度
+    window.onresize=function(){
+        changeDivHeight();
+    };
+    function changeDivHeight(){
+        var h = document.documentElement.clientHeight;//获取页面可见高度
+        var w = document.documentElement.clientWidth;//获取页面可见高度
+        document.getElementById("title").style.left=0.15*w+"px";
+        document.getElementById("title").style.top=0.8*h+"px";
+    }
 </script>
 
 </body>
